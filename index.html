@@ -1,82 +1,93 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WZRUA | Official Site</title>
-  <meta name="description" content="Quality Hardware Provider">
   <style>
-    :root{--w:900px}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#111;background:#fff}
-    header{padding:72px 20px 36px;border-bottom:1px solid #eee}
-    .wrap{max-width:var(--w);margin:auto}
-    .brand{font-size:32px;font-weight:700}
-    .slogan{margin-top:6px;font-size:18px;color:#555}
-    section{padding:48px 20px;border-bottom:1px solid #f2f2f2}
-    h2{margin:0 0 12px}
-    p{line-height:1.7;margin:8px 0}
-    .card{background:#fafafa;border:1px solid #eee;border-radius:16px;padding:20px}
-    .grid{display:grid;gap:16px}
-    @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
-    a{color:inherit}
-    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border:1px solid #111;border-radius:999px;text-decoration:none}
-    footer{padding:28px 20px;color:#777;font-size:14px}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .product {
+      width: 200px;
+      margin: 10px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <div class="brand">WZRUA</div>
-      <div class="slogan"> · Wonderful · Zealous · Remarkable · Unique · Advanced ·
 
-</div>
-    </div>
+  <!-- Header with navigation links -->
+  <header>
+    <a href="#">首页</a>
+    <a href="#contact">联系我们</a>
   </header>
 
-  <section id="story">
-    <div class="wrap grid">
-      <div>
-        <h2>Brand Story</h2>
-        <p>用两三段文字讲清楚品牌起源、使命愿景、与众不同的点。保持简洁、真诚、有温度。</p>
-        <p>可插入一条关键里程碑或客户评价，增强信任。</p>
-        <a class="cta" href="#contact">Contact Us</a>
-      </div>
-      <div class="card">
-        <h3>里程碑</h3>
-        <p>• 2022：品牌成立</p>
-        <p>• 2023：服务客户 100+</p>
-        <p>• 2024：进入北美市场</p>
-      </div>
+  <!-- Main content with products -->
+  <div class="container">
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1">
+      <h3>产品名称</h3>
+      <a href="https://www.amazon.com/dp/B08XXXXXXX" target="_blank">购买</a>
     </div>
-  </section>
+    <div class="product">
+      <img src="product2.jpg" alt="Product 2">
+      <h3>产品名称</h3>
+      <a href="https://www.amazon.com/dp/B08XXXXXXX" target="_blank">购买</a>
+    </div>
+    <!-- Add more products as needed -->
+  </div>
 
-  <section id="contact">
-    <div class="wrap grid">
-      <div>
-        <h2>联系方式</h2>
-        <p>E-Mail: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
-        <p>Instagram：<a href="https://instagram.com/yourbrand" target="_blank" rel="noopener">@yourbrand</a></p>
-        <p>LinkedIn：<a href="https://www.linkedin.com/company/yourbrand" target="_blank" rel="noopener">yourbrand</a></p>
-        <p>微信：可在此放二维码图片</p>
-      </div>
-      <div class="card">
-        <h3>给我留言</h3>
-        <form action="https://formspree.io/f/your-id" method="POST">
-          <input type="email" name="email" placeholder="你的邮箱" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;margin-bottom:8px">
-          <textarea name="message" rows="4" placeholder="想说的话" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px"></textarea>
-          <button type="submit" class="cta" style="margin-top:12px">发送</button>
-        </form>
-        <p style="font-size:12px;color:#777;margin-top:8px">* 表单服务可换成你喜欢的提供商，或改为直接邮件链接。</p>
-      </div>
-    </div>
-  </section>
+  <!-- Footer with contact form -->
+  <div class="footer" id="contact">
+    <h2>联系我们</h2>
+    <form class="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="您的名字" required>
+      <input type="email" name="email" placeholder="您的邮箱" required>
+      <textarea name="message" placeholder="您的信息" rows="4" required></textarea>
+      <button type="submit">提交</button>
+    </form>
+  </div>
 
-  <footer>
-    <div class="wrap">
-      © <span id="y"></span> 你的品牌名
-    </div>
-  </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
