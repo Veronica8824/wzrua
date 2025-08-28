@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WZRUA | Official Site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WZRUA ·Wonderful Home Solution Provider·</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
     }
     header {
       background-color: #333;
@@ -21,73 +22,145 @@
       text-decoration: none;
       margin: 0 15px;
     }
-    .container {
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+     .hero {
+      background-image: url('https://storage.googleapis.com/wzrua/images/home.png'); /* 背景图片 */
+      background-size: cover; /* 背景图片覆盖整个区域 */
+      background-position: center; /* 背景图片居中 */
+      height: 400px;
+      text-align: center;
+      color: white;
       display: flex;
       justify-content: center;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 给文字添加阴影，使其更清晰 */
+    }
+    .product-container {
+      display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       margin: 20px;
     }
     .product {
-      width: 200px;
-      margin: 10px;
+      background-color: white;
+      margin: 15px;
+      padding: 20px;
       text-align: center;
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .product img {
-      width: 100%;
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
     }
-    .footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .product h3 {
+      margin: 10px 0;
+      font-size: 18px;
     }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      width: 300px;
-      margin: 0 auto;
+    .product p {
+      color: #888;
+    }
+       .contact-form {
+      background-color: white;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .contact-form input, .contact-form textarea {
-      margin: 10px 0;
+      width: 100%;
       padding: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #e67e22;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header with navigation links -->
   <header>
-    <a href="#">首页</a>
-    <a href="#contact">联系我们</a>
+    <h1>WZRUA</h1>
   </header>
 
-  <!-- Main content with products -->
-  <div class="container">
-    <div class="product">
-      <img src="product1.jpg" alt="Product 1">
-      <h3>产品名称</h3>
-      <a href="https://www.amazon.com/dp/B08XXXXXXX" target="_blank">购买</a>
-    </div>
-    <div class="product">
-      <img src="product2.jpg" alt="Product 2">
-      <h3>产品名称</h3>
-      <a href="https://www.amazon.com/dp/B08XXXXXXX" target="_blank">购买</a>
-    </div>
-    <!-- Add more products as needed -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to Wzrua Store</h1>
   </div>
 
-  <!-- Footer with contact form -->
-  <div class="footer" id="contact">
-    <h2>联系我们</h2>
-    <form class="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="您的名字" required>
-      <input type="email" name="email" placeholder="您的邮箱" required>
-      <textarea name="message" placeholder="您的信息" rows="4" required></textarea>
-      <button type="submit">提交</button>
-    </form>
+  
+  <!-- 
+  
+  <div id="products" class="product-container">
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150" alt="产品1">
+      <h3>Toilt Paper Holder</h3>
+      <p>￥199</p>
+      <a href="https://www.amazon.com/dp/B08XXXXXXX" target="_blank">BUY</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150" alt="产品2">
+      <h3>产品名称2</h3>
+      <p>￥299</p>
+      <a href="https://www.amazon.com/dp/B08XXXXXXX" target="_blank">跳转购买</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150" alt="产品3">
+      <h3>产品名称3</h3>
+      <p>￥399</p>
+      <a href="https://www.amazon.com/dp/B08XXXXXXX" target="_blank">跳转购买</a>
+    </div>
   </div>
 
+这是一个注释 -->
+
+<!-- 联系我们模块 -->
+  <!-- 联系我们模块 -->
+<div id="contact" class="contact-form">
+  <h2>联系我们</h2>
+ <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe5kNBSg5Ni_ze_JG3_5iumU2iNCEw8_1TPtc-TR8-_zc21TQ/viewform?embedded=true" width="640" height="686" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
+</div>
+
+
+
+
+  <footer>
+    <p>&copy; 2025 WZRUA</p>
+  </footer>
 </body>
 </html>
