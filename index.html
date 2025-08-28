@@ -1,210 +1,82 @@
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frame</title>
-    <style id="reset">
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  border-width: 0;
-}
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1em;
-}
-small {
-  font-size: 80%;
-}
-table {
-  text-indent: 0;
-  border-color: inherit;
-  border-collapse: collapse;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: inherit;
-  color: inherit;
-  margin: 0;
-  padding: 0;
-}
-button,
-select {
-  text-transform: none;
-}
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-  background-color: transparent;
-  background-image: none;
-}
-progress {
-  vertical-align: baseline;
-}
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-  color: #9ca3af;
-}
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  vertical-align: middle;
-}
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-</style>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WZRUA | Official Site</title>
+  <meta name="description" content="你的品牌一句话介绍">
   <style>
-    html,
-    body {
-      position: relative;
-      margin: 0;
-      padding: 0;
-    }
-    .bg-clip-text {
-      -webkit-background-clip: text !important;
-      background-clip: text !important;
-    }
-    #container {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 2640px;
-      height: 10877px;
-      transform-origin: 0 0;
-      transform: scale(1);
-      display: none;
-      overflow: hidden;
-    }
+    :root{--w:900px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#111;background:#fff}
+    header{padding:72px 20px 36px;border-bottom:1px solid #eee}
+    .wrap{max-width:var(--w);margin:auto}
+    .brand{font-size:32px;font-weight:700}
+    .slogan{margin-top:6px;font-size:18px;color:#555}
+    section{padding:48px 20px;border-bottom:1px solid #f2f2f2}
+    h2{margin:0 0 12px}
+    p{line-height:1.7;margin:8px 0}
+    .card{background:#fafafa;border:1px solid #eee;border-radius:16px;padding:20px}
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+    a{color:inherit}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border:1px solid #111;border-radius:999px;text-decoration:none}
+    footer{padding:28px 20px;color:#777;font-size:14px}
   </style>
-  </head>
-  <body>
-    <div id="container">
-      <div style="width: 2640px; height: 10877px; position: absolute;"></div>
-    </div>
-  </body>
-  
-<script>
-const page = {
-  width: 2640,
-  height: 10877
-}
-const resizePage = () => {
-  const viewWidth = window.innerWidth
-  const container = document.getElementById('container')
-  const scale = viewWidth / page.width
-  const displayHeight = page.height * scale || 0
-  document.body.style.paddingTop = displayHeight + 'px'
-  container.style.transform = 'scale(' + scale + ')'
-  container.style.display = 'block'
-}
-resizePage();
-(function () {
-  var throttle = function (type, name, obj) {
-    obj = obj || window;
-    var running = false;
-    var func = function () {
-      if (running) { return; }
-      running = true;
-      requestAnimationFrame(function () {
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
-      });
-    };
-    obj.addEventListener(type, func);
-  };
-  throttle("resize", "optimizedResize");
-})();
-window.addEventListener("optimizedResize", resizePage);
-</script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">WZRUA</div>
+      <div class="slogan">Wonderful·Zealous·Remarkable·Unique·Advanced
 
-  </html>
+</div>
+    </div>
+  </header>
+
+  <section id="story">
+    <div class="wrap grid">
+      <div>
+        <h2>Brand Story</h2>
+        <p>用两三段文字讲清楚品牌起源、使命愿景、与众不同的点。保持简洁、真诚、有温度。</p>
+        <p>可插入一条关键里程碑或客户评价，增强信任。</p>
+        <a class="cta" href="#contact">Contact Us</a>
+      </div>
+      <div class="card">
+        <h3>里程碑</h3>
+        <p>• 2022：品牌成立</p>
+        <p>• 2023：服务客户 100+</p>
+        <p>• 2024：进入北美市场</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap grid">
+      <div>
+        <h2>联系方式</h2>
+        <p>E-Mail: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+        <p>Instagram：<a href="https://instagram.com/yourbrand" target="_blank" rel="noopener">@yourbrand</a></p>
+        <p>LinkedIn：<a href="https://www.linkedin.com/company/yourbrand" target="_blank" rel="noopener">yourbrand</a></p>
+        <p>微信：可在此放二维码图片</p>
+      </div>
+      <div class="card">
+        <h3>给我留言</h3>
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <input type="email" name="email" placeholder="你的邮箱" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;margin-bottom:8px">
+          <textarea name="message" rows="4" placeholder="想说的话" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px"></textarea>
+          <button type="submit" class="cta" style="margin-top:12px">发送</button>
+        </form>
+        <p style="font-size:12px;color:#777;margin-top:8px">* 表单服务可换成你喜欢的提供商，或改为直接邮件链接。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> 你的品牌名
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
